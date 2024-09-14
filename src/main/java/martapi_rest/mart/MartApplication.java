@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class MartApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(MartApplication.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(MartApplication.class, args);
     }
 
-	@GetMapping("/")
-	public String welcome() {
-		return "Welcome to Mart Application";
-	}
+    @GetMapping("/")
+    public String welcome() {
+        return "Welcome to Mart Application";
+    }
 }
