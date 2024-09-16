@@ -1,4 +1,5 @@
 package martapi_rest.mart.food;
 
-public interface FoodRepository {
-}
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface FoodRepository extends JpaRepository<Food, Long> { }
