@@ -16,6 +16,7 @@ public class FoodController {
     @Autowired
     private FoodRepository foodRepository;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public void addFood(@RequestBody FoodRequestDTO data) {
         Food foodData = new Food(data);
@@ -23,6 +24,7 @@ public class FoodController {
         return;
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public List<FoodResponseDTO>getAllFromMenu() {
         return (List<FoodResponseDTO>) foodRepository.findAll().stream().map(FoodResponseDTO::new).toList();
