@@ -12,6 +12,36 @@
 - **Spring Initializr** [spring](https://start.spring.io/)
 
 
+## API Rest
+
+#### Welcome
+
+```
+  GET /
+```
+
+#### Full Items
+
+```http
+  GET /foods
+```
+
+#### Add Item
+
+```http
+  POST /foods
+```
+
+#### Data types
+
+| id   | title       | description     | image     | price    |
+| :---------- | :--------- | :----------------| :--------- | :--------- | 
+| `Long`      | `String` | `String`  | `String` | `Int`
+
+
+
+
+
 
 
 
