@@ -16,8 +16,15 @@ public class Food {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String title;
     private String description;
     private String image;
     private Integer price;
+
+    public Food(FoodRequestDTO data) {
+        this.title = data.title();
+        this.description = data.description();
+        this.image = data.image();
+        this.price = data.price();
+    }
 }

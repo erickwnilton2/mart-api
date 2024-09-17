@@ -2,11 +2,10 @@ package martapi_rest.mart.controller;
 
 import martapi_rest.mart.food.Food;
 import martapi_rest.mart.food.FoodRepository;
+import martapi_rest.mart.food.FoodRequestDTO;
 import martapi_rest.mart.food.FoodResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,6 +15,13 @@ public class FoodController {
 
     @Autowired
     private FoodRepository foodRepository;
+
+    @PostMapping
+    public void addFood(@RequestBody FoodRequestDTO data) {
+        Food foodData = new Food(data);
+        foodRepository.save(foodData);
+        return;
+    }
 
     @GetMapping
     public List<FoodResponseDTO>getAllFromMenu() {
