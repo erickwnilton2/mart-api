@@ -6,6 +6,7 @@
 - **Database** [postgresSQL](https://www.postgresql.org/)
 - **LIB** [springBoot](https://spring.io/projects/spring-boot)
 - **IDE** [intellij Idea](https://www.jetbrains.com/idea/)
+- **Test** [postman](https://www.postman.com/)
 
 ### Backend initialization
 
@@ -23,13 +24,13 @@
 #### Full Items
 
 ```http
-  GET /foods
+  GET / foods
 ```
 
 #### Add Item
 
 ```http
-  POST /foods
+  POST / foods
 ```
 
 #### Data types
