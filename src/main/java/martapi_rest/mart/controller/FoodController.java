@@ -21,9 +21,10 @@ public class FoodController {
 
     @Operation(description = "Add new food:")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "food added to database")
+            @ApiResponse(responseCode = "201", description = "food added to database")
     })
     @PostMapping
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     public void addFood(@RequestBody FoodRequestDTO data) {
         Food foodData = new Food(data);
         foodRepository.save(foodData);
@@ -35,6 +36,7 @@ public class FoodController {
             @ApiResponse(responseCode = "200", description = "all foods registered in the database")
     })
     @GetMapping
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     public List<FoodResponseDTO>getAllFromMenu() {
         return (List<FoodResponseDTO>) foodRepository.findAll().stream().map(FoodResponseDTO::new).toList();
     }
