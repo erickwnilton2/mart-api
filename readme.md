@@ -3,10 +3,10 @@
 ### Technology stack
 
 - **Language** [java](https://en.wikipedia.org/wiki/Java_(programming_language))
-- **Database** [postgresSQL](https://www.postgresql.org/)
+- **Database** [MYSQL](https://www.mysql.com/)
 - **LIB** [springBoot](https://spring.io/projects/spring-boot)
 - **IDE** [intellij Idea](https://www.jetbrains.com/idea/)
-- **Test** [postman](https://www.postman.com/)
+- **Test** [Swagger](https://www.swagger.com/)
 
 ### Backend initialization
 
