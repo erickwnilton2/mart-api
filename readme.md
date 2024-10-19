@@ -18,19 +18,31 @@
 #### Welcome
 
 ```
-  GET /
+  GET/
 ```
 
 #### Full Items
 
 ```http
-  GET / foods
+  GET/foods
 ```
 
 #### Add Item
 
 ```http
-  POST / foods
+  POST/foods
+```
+
+#### Put Item
+
+```http
+  PUT/foods/{id}
+```
+
+#### Delete Item
+
+```http
+  DELETE/foods/{id}
 ```
 
 #### Data types
